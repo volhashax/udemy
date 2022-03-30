@@ -7,7 +7,81 @@ namespace CSharpCourse
 
         static void Main(string[] args)
         {
+            
 
+        
+
+        }
+
+        static void StringEmptiness()
+        {
+            string empty = "";
+            string whiteSpaced = " ";
+            string notEmpty = " b";
+            string nullString = null;
+
+            Console.WriteLine("IsNullOrEmpty");
+            bool isNullOrEmpty = string.IsNullOrEmpty(nullString);
+            Console.WriteLine(isNullOrEmpty);
+
+            isNullOrEmpty = string.IsNullOrEmpty(whiteSpaced);
+            Console.WriteLine(isNullOrEmpty);
+
+            isNullOrEmpty = string.IsNullOrEmpty(notEmpty);
+            Console.WriteLine(isNullOrEmpty);
+
+            isNullOrEmpty = string.IsNullOrEmpty(empty);
+            Console.WriteLine(isNullOrEmpty);
+
+            Console.WriteLine();
+            Console.WriteLine("IsNullOrWhiteSpace");
+
+            bool isNullOrWhiteSpace = string.IsNullOrWhiteSpace(nullString);
+            Console.WriteLine(isNullOrWhiteSpace);
+
+            isNullOrWhiteSpace = string.IsNullOrWhiteSpace(whiteSpaced);
+            Console.WriteLine(isNullOrWhiteSpace);
+
+            isNullOrWhiteSpace = string.IsNullOrWhiteSpace(notEmpty);
+            Console.WriteLine(isNullOrWhiteSpace);
+
+            isNullOrWhiteSpace = string.IsNullOrWhiteSpace(empty);
+            Console.WriteLine(isNullOrWhiteSpace);
+        }
+
+        static  void QueryStrings()
+        {
+            string name = "abracadabra";
+            bool containsA = name.Contains('a');
+            bool containsE = name.Contains('E');
+
+            Console.WriteLine(containsA);
+            Console.WriteLine(containsE);
+
+            bool endsWithAbra = name.EndsWith("abra");
+            Console.WriteLine(endsWithAbra);
+
+            bool startsWithAbra = name.StartsWith("abra");
+            Console.WriteLine(startsWithAbra);
+
+            int indexOfA = name.IndexOf('a', 1);
+            Console.WriteLine(indexOfA);
+
+            int lastIndexOfR = name.LastIndexOf('r');
+            Console.WriteLine(lastIndexOfR);
+
+            Console.WriteLine(name.Length);
+
+            string substrFrom5 = name.Substring(5);
+            string substrFromTo = name.Substring(0, 3);
+
+            Console.WriteLine(substrFrom5);
+            Console.WriteLine(substrFromTo);
+
+        }
+
+        static void StaticAndInstancemembers()
+        {
             string name = "abracadabra";
 
             bool containsA = name.Contains('a');
@@ -25,10 +99,6 @@ namespace CSharpCourse
             string xStr = x.ToString();
             Console.WriteLine(xStr);
             Console.WriteLine(x);
-
-
-
-
         }
 
         static void ComparisonOperators()

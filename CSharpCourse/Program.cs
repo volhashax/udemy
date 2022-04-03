@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace CSharpCourse
 {
@@ -7,14 +8,64 @@ namespace CSharpCourse
 
         static void Main(string[] args)
         {
-            
+            StringBuilder sb = new StringBuilder();
+            sb.Append("My ");
+            sb.Append("name ");
+            sb.Append("is ");
+            sb.Append("John");
+            sb.AppendLine("!");
+            sb.AppendLine("Hello!");
 
-        
+            string str = sb.ToString();
+            Console.WriteLine(str);
+           
+
+
+        }
+
+        static void StringModification()
+        {
+            string nameConcat = string.Concat("My ", "name ", "is ", "John");
+            Console.WriteLine(nameConcat);
+
+            nameConcat = string.Join(" ", "My", "name", "is", "John");
+            Console.WriteLine(nameConcat);
+
+            nameConcat = "My " + "name " + "is " + "John";
+
+            //string newName = 
+            nameConcat = nameConcat.Insert(0, "By the way, ");
+            Console.WriteLine(nameConcat);
+
+            nameConcat = nameConcat.Remove(0, 1);
+            Console.WriteLine(nameConcat);
+
+            string replaced = nameConcat.Replace('n', 'z');
+            Console.WriteLine(replaced);
+
+            string data = "12;28;34;25;64";
+            string[] splitData = data.Split(';');
+            string first = splitData[0];
+            Console.WriteLine(first);
+
+            char[] chars = nameConcat.ToCharArray();
+            Console.WriteLine(chars[0]);
+            Console.WriteLine(nameConcat[0]);
+
+            string lower = nameConcat.ToLower();
+            Console.WriteLine(lower);
+
+            string upper = nameConcat.ToUpper();
+            Console.WriteLine(upper);
+
+            string john = " My name is John ";
+            Console.WriteLine(john.Trim());
 
         }
 
         static void StringEmptiness()
         {
+            string str = string.Empty; // same as "";
             string empty = "";
             string whiteSpaced = " ";
             string notEmpty = " b";

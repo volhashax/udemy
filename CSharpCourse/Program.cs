@@ -10,19 +10,53 @@ namespace CSharpCourse
         static void Main(string[] args)
         {
 
-            string str1 = "abcde";
-            string str2 = "abcde";
+            
 
-            bool areEqual = str1 == str2;
+        }
 
+        static void ConsoleBasics()
+        {
+            //Console.WriteLine("Hi, please tell me your name");
+            //string name = Console.ReadLine();
+            //string sentence = $"Your name is {name}";
+            //Console.WriteLine(sentence);
+
+            Console.WriteLine("Hi, please tell me your age.");
+            string input = Console.ReadLine();
+            int age = int.Parse(input);
+
+            string sentence = $"Your age is {age}";
+            Console.WriteLine(sentence);
+
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+
+            Console.Write("New Style ");
+            Console.Write("New Style\n");
+        }
+
+        static void ComparingStrings()
+        {
+            //string str1 = "abcde";
+            //string str2 = "abcde";
+
+            // bool areEqual = str1 == str2;
+
+            //Console.WriteLine(areEqual);
+
+            // areEqual = string.Equals(str1, str2, StringComparison.Ordinal);
+            //Console.WriteLine(areEqual);
+
+            string str1 = "Strasse";
+            string str2 = "Straße";
+
+            bool areEqual = string.Equals(str1, str2, StringComparison.Ordinal);
             Console.WriteLine(areEqual);
-
-            areEqual = string.Equals(str1, str2, StringComparison.Ordinal);
+            areEqual = string.Equals(str1, str2, StringComparison.InvariantCulture);
             Console.WriteLine(areEqual);
-
-
-
-
+            areEqual = string.Equals(str1, str2, StringComparison.CurrentCulture);
+            Console.WriteLine(areEqual);
         }
 
         static void StringFormat()

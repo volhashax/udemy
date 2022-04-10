@@ -7,7 +7,10 @@ namespace D_OOP
         static void Main(string[] args)
         {
             Character c = new Character();
-            //c.
+           
+            c.Hit(120);
+
+            Console.WriteLine(c.Health);
         }
     }
 }

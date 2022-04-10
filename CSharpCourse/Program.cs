@@ -1,4 +1,5 @@
-﻿using System;
+﻿using D_OOP;
+using System;
 using System.Text;
 using System.Threading;
 
@@ -9,8 +10,11 @@ namespace CSharpCourse
 
         static void Main(string[] args)
         {
+            Character c = new Character();
+            c.Hit(10);
 
-            
+            Console.WriteLine(c.Health);
+
 
         }
 
